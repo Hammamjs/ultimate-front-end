@@ -1,0 +1,14 @@
+- let title = "Home Page"
+doctype
+html(lang = 'en')
+  head
+    meta(charset = 'UTF-8')
+    meta(name = 'viweport', content = 'width=device-width, inital-scale = 1.0')
+    meta(http-equiv = 'x-ua-compatible', content = 'ie-edge')
+    include pug/layout/style
+    title #{title}
+  body
+    .page.home-page
+      include pug/layout/sidebar
+      .area-content
+        h1  #{title}
