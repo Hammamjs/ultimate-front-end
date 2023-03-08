@@ -2,13 +2,15 @@
 doctype
 html(lang = 'en')
   head
-    meta(charset = 'UTF-8')
-    meta(name = 'viweport', content = 'width=device-width, inital-scale = 1.0')
-    meta(http-equiv = 'x-ua-compatible', content = 'ie-edge')
-    include pug/layout/style
-    title #{title}
+    include pug/layout/meta
   body
     .page.home-page
       include pug/layout/sidebar
       .area-content
-        h1  #{title}
+        .header
+          i.fa-solid.fa-exchange.toggle-sidebar
+        .container-fluid
+          .content
+            h1  #{title}
+            p.page-description.lead this is Description of #{title}
+    include pug/layout/scripts

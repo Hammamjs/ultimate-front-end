@@ -1,1 +1,21 @@
-.sidebar sidebar
+.sidebar
+  .logo.text-center.pb-2 Hammam
+  .links
+    ul.list.list-unstyled
+      li: a(href = "#") Home
+      li
+        a(href = "#").toggle-menu
+          | Form
+          i.fa-solid.fa-angle-right.icon
+        ul.child.list-unstyled
+          li: a(href = "#") input
+          li: a(href = "#") Textarea
+          li: a(href = "#") Checkbox
+          li: a(href = "#") Radio
+      li
+        a(href = '#').toggle-menu
+          | Misc
+          i.fa-solid.fa-angle-right.icon
+        ul.child.list-unstyled
+          li: a(href = "#") Loading
+          li: a(href = "#") Breadcrumbs

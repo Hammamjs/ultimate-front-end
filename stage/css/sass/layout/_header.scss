@@ -1,0 +1,10 @@
+@import '../variables/variables';
+.header {
+ background-color: #fff;
+ margin-bottom: 5px;
+ svg {
+  cursor: pointer;
+  color: $flatGray;
+  padding: 15px;
+ }
+}

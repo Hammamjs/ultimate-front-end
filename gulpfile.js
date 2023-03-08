@@ -5,7 +5,6 @@ const gulp = require('gulp'),
       concat = require('gulp-concat'),
       sass = require('gulp-sass') (require('sass')),
       sourcemap = require('gulp-sourcemaps'),
-      notify = require('gulp-notify'),
       liverload = require('gulp-livereload'),
       newer = require('gulp-newer');
 
@@ -17,7 +16,6 @@ gulp.task('html', () => {
  }))
  .pipe(gulp.dest('dist'))
  .pipe(liverload())
- .pipe(notify('HTML task is Done'))
 })
 
 gulp.task('css', () => {
@@ -29,7 +27,6 @@ gulp.task('css', () => {
         .pipe(sourcemap.write('.'))
         .pipe(gulp.dest("dist/css"))
         .pipe(liverload())
-        .pipe(notify('css Task is Done'))
 })
 
 gulp.task('js', () => {
@@ -38,7 +35,6 @@ gulp.task('js', () => {
         .pipe(minify())
         .pipe(gulp.dest('dist/js'))
         .pipe(liverload())
-        .pipe(notify("Js Task is Done"))
 })
 
 gulp.task('watch', () => {

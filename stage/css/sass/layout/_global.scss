@@ -7,9 +7,15 @@
 .page {
  min-height: 100vh;
  .area-content {
-  width: calc(100% - 250px);
+  color: #000;
+  width: 100%;
+  background-color: #EEE;
   height: 100vh;
   transition: all .3s;
   float: right;
+  &.no-sidebar {
+   width: calc(100% - 250px);
+  }
  }
 }
+
