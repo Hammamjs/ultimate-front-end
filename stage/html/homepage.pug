@@ -10,7 +10,5 @@ html(lang = 'en')
         .header
           i.fa-solid.fa-exchange.toggle-sidebar
         .container-fluid
-          .content
-            h1  #{title}
-            p.page-description.lead this is Description of #{title}
+          include pug/layout/page-title
     include pug/layout/scripts
