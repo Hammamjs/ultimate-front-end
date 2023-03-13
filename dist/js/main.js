@@ -21,8 +21,17 @@ $( function() {
 
   // for seetings box
   $('.toggle-gear').on('click', function() {
-    $(this).children().toggleClass('fa-spin')
+    $(this).find('li').toggleClass('fa-spin')
     $(this).parent().toggleClass('hide-box');
+  })
+  let themeClasses = [];
+  $('.color-options li').each(function () {
+    themeClasses.push($(this).data("theme"))
+  })
+  $(".color-options li").on('click', function() {
+    $(this).addClass("active").siblings().removeClass("active");
+    $('body').removeClass(themeClasses.join(' '))
+    $('body').addClass($(this).attr('data-theme'));
   })
 }); 
 

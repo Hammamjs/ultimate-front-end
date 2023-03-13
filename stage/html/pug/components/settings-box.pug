@@ -1,13 +1,13 @@
 .setting-box.hide-box
   .toggle-gear
     i.fa.fa-gear
-  .content-box.text-center.mt-2
-    .box-option
+  .content-box.text-center
+    .box-option.color-options
       h5 color
-      .color-options
-        - let colors = [""];
-        .ul.list-unstyled
-
+      -let colors = ["green-theme" , "blue-theme" , "red-theme", "orange-theme", "purple-theme", "midnight-theme"];
+      ul.list-unstyled
+        each color in colors
+          li(data-theme = color)
     .box-option
       h5 font size
     .box-option
