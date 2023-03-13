@@ -1,47 +1,79 @@
-.header
-  i.fa-solid.fa-exchange.toggle-sidebar.header-icon
-  .dropdown
-  .fa.fa-bell#notification.noti-drop(data-bs-toggle='dropdown' aria-expanded='false')
-  ul.dropdown-menu(aria-labelledby='notification')
-    li.noti-head.text-center
-      span Notification
-    li.d-flex.justify-content-between.align-items-center
-      span 2 unread
-      a.all-read(href='#') Mark all as read
-    li.bg-light.mt-2.mb-2.shadow.rounded.p-3.mb-4.unread
-      .d-flex.align-items-center
-        i.fa.fa-user(style = "--i : #f7f723")
-        .container-text
-          p.m-0.font-weight-bolod Is this your email address ?
-          p.m-0.text-secondary
-            | is this email@email.com still your email address ?
-      .change.text-end
-        a.m-2.text-decoration-none(href = "#") Yes
-        a.m-2.text-decoration-none(href = "#") Change it now
-    span.mb-2.ms-3.text-secondary
-      | Today
-    li.bg-light.shadow.rounded.p-3.mb-0.border-bottom.unread
-      .d-flex.align-items-center
-        i.fa.fa-shop(style = "--i : #17d317")
-        .container-text
-          p.m-0.font-weight-bolod New store order
-          p.m-0.text-secondary
-            | Total: $ 35.00
-    li.bg-light.shadow.rounded.p-3.m-0.border-bottom
-      .d-flex.align-items-center
-        i.fa.fa-message(style = "--i : #009688")
-        .container-text
-          p.m-0.font-weight-bolod New support message
-          p.m-0.text-secondary
-            | JimdoSupport: Great!
-    li.bg-light.shadow.rounded.p-3.m-0.border-bottom
-      .d-flex.align-items-center
-        i.fa.fa-bell(style = "--i : #2929d5")
-        .container-text
-          p.m-0.font-weight-bolod New guest book entry
-          p.m-0.text-secondary
-            | jimdoUser: i think that‘s really nice!
-    li
-      a.show-all.d-block.text-center.text-decoration-none(href='#') Show all notification
-  div.toggle-fullScreen.d-flex.justify-content-center.align-items-center.header-icon
-    i.fa.fa-expand
+.header.d-flex.justify-content-between.align-items-center
+  .content.d-flex.justify-content-between.align-items-center
+    i.fa-solid.fa-exchange.toggle-sidebar.header-icon
+    .dropdown
+    .fa.fa-bell#notification.noti-drop(data-bs-toggle='dropdown' aria-expanded='false')
+    ul.dropdown-menu(aria-labelledby='notification')
+      li.noti-head.text-center
+        span Notification
+      li.d-flex.justify-content-between.align-items-center
+        span 2 unread
+        a.all-read(href='#') Mark all as read
+      li.bg-light.mt-2.mb-2.shadow.rounded.p-3.mb-4.unread
+        .d-flex.align-items-center
+          i.fa.fa-user(style = "--i : #f7f723")
+          .container-text
+            p.m-0.font-weight-bolod Is this your email address ?
+            p.m-0.text-secondary
+              | is this email@email.com still your email address ?
+        .change.text-end
+          a.m-2.text-decoration-none(href = "#") Yes
+          a.m-2.text-decoration-none(href = "#") Change it now
+      span.mb-2.ms-3.text-secondary
+        | Today
+      li.bg-light.shadow.rounded.p-3.mb-0.border-bottom.unread
+        .d-flex.align-items-center
+          i.fa.fa-shop(style = "--i : #17d317")
+          .container-text
+            p.m-0.font-weight-bolod New store order
+            p.m-0.text-secondary
+              | Total: $ 35.00
+      li.bg-light.shadow.rounded.p-3.m-0.border-bottom
+        .d-flex.align-items-center
+          i.fa.fa-message(style = "--i : #009688")
+          .container-text
+            p.m-0.font-weight-bolod New support message
+            p.m-0.text-secondary
+              | JimdoSupport: Great!
+      li.bg-light.shadow.rounded.p-3.m-0.border-bottom
+        .d-flex.align-items-center
+          i.fa.fa-bell(style = "--i : #2929d5")
+          .container-text
+            p.m-0.font-weight-bolod New guest book entry
+            p.m-0.text-secondary
+              | jimdoUser: i think that‘s really nice!
+      li
+        a.show-all.d-block.text-center.text-decoration-none(href='#') Show all notification
+    div.toggle-fullScreen.d-flex.justify-content-center.align-items-center.header-icon
+      i.fa.fa-expand
+  .tool
+    .dropdown.mega-menu-dropdown
+    .user-info.d-flex.align-items-center.personal-user#usermenu(data-bs-toggle='dropdown' aria-expanded='false')
+      img#avatar.image(src= "../layout/imgs/avatar.jpg").avatar
+      p.d-block.user-name.m-0 Hammam Hussein
+      i.fa.fa-chevron-down
+    ul.dropdown-menu.menu(aria-labelledby='#usermenu')
+      .megamenu-dropdown
+        .mega-info
+        h3 Hammam Hussein
+        p premium member
+      hr 
+      .new-posts
+        li replied for your comment Bla bla
+        li see what‘s new in your posts
+        li see your profile updates
+        li replied for your comment Bla bla
+      hr
+      .row.icons
+        .col.row-links
+          .link-box
+            i.fa.fa-gear.fa-fw.p-0.gear
+            span Settings
+        .col.row-links
+          .link-box
+            i.fa.fa-user.fa-fw.p-0.user
+            span My profile
+        .col.row-links
+          .link-box
+            i.fa.fa-power-off.fa-fw.p-0.logout
+            span Logout

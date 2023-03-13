@@ -1,14 +1,15 @@
 $( function() {
 "use strict";
+  // to hide left sidebar
   $('.toggle-sidebar').on('click', function() {
     $('.area-content , .sidebar').toggleClass('no-sidebar')
   })
-
+  // for arrow on the left sidebar
   $(".toggle-menu").on('click', function() {
     $(this).next('.child').slideToggle();
     $(this).children('svg').toggleClass("fa-angle-right s, fa-angle-down")
   });
-
+  // for fullscreen function
   $('.toggle-fullScreen').on("click", function() {
     $(this).children().toggleClass("full-screen");
     if ($(this).children().hasClass("full-screen")) {
@@ -18,9 +19,13 @@ $( function() {
     }
   });
 
-});
+  // for seetings box
+  $('.toggle-gear').on('click', function() {
+    $(this).children().toggleClass('fa-spin')
+    $(this).parent().toggleClass('hide-box');
+  })
+}); 
 
-/* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
 /* View in fullscreen */
