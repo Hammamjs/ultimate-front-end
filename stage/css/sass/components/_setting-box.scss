@@ -17,6 +17,7 @@
  .toggle-gear {
   position: absolute;
   cursor: pointer;
+  transition: $small-delay;
   left: -35px;
   border-radius: 8px 0 0 8px;
   top: 100px;
@@ -24,6 +25,9 @@
   padding: 6px 8px;
   border: 1px solid #c2b9b9;
   border-right-width: 0;
+  &:hover {
+   color: #27ae60;
+  }
  }
 
  .color-options {

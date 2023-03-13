@@ -12,6 +12,10 @@ svg {
 cursor: pointer;
 color: $flatGray;
 padding: 15px;
+transition: $small-delay;
+&:hover {
+  color: #27ae60;
+}
 }
 .noti-drop {
 background-color: rgb(204 204 204 / 35%);
@@ -23,6 +27,9 @@ border-radius: 50%;
   position:relative;
   top: 18px !important;
   background-color: #e6e6ed;
+  h3 {
+    color: #27ae60;
+  }
   &::before {
 content: "";
     position: absolute;
@@ -64,7 +71,6 @@ content: "";
     border-radius: 50%;
     margin-right: 9px;
     font-size: 13px;
-    color: #FFF;
     background-color:var(--i);
     margin: 0 10px;
   }
@@ -77,6 +83,7 @@ content: "";
   background-color: #DDD;
   width: 450px !important;
   padding: 20px !important;
+  }
   &::before {
 content: "";
     position: absolute;
@@ -110,5 +117,4 @@ content: "";
       }
     }
   }
-}
 }

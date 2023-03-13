@@ -9,8 +9,18 @@ $themes: (
 
 @each $theme, $map in $themes {
  .#{$theme} {
+  $color: map-get($map , color) !important;
   .page-content .page-head .page-title {
-   color: map-get($map , color);
+   color: $color;
  }
+ .content svg:hover{
+    color: $color;
+}
+.toggle-gear:hover{
+ color: $color;
+}
+.menu .megamenu-dropdown h3 {
+ color: $color;
+}
 }
 }
