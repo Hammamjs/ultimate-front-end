@@ -60,6 +60,11 @@ transition: all .3s;
     display: flex;
   align-items: center;
   justify-content: space-between;
+  &.active {
+    &::before {
+      background-color: #27ae60;
+    }
+  }
     &:hover {
       padding-left: 30px;
     }

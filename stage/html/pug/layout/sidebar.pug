@@ -2,7 +2,7 @@
   .logo.text-center.pb-2 Hammam
   .links
     ul.list.list-unstyled
-      li: a(href = "#") Home
+      li: a(href = "homepage.html" class = title == "Home Page" ? "active" : "") Home
       li
         a(href = "#").toggle-menu
           | Form
@@ -19,3 +19,4 @@
         ul.child.list-unstyled
           li: a(href = "#") Loading
           li: a(href = "#") Breadcrumbs
+      li: a(href = "charts.html"  class = title == "Charts" ? "active" : "") Charts
